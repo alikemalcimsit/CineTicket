@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:ticket_buy/carousel_demo.dart';
+import 'package:ticket_buy/topbanner.dart';
 import 'package:ticket_buy/image_constant.dart';
 import 'package:ticket_buy/text_constant.dart';
 import 'color_constant.dart';
