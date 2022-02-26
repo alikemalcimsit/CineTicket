@@ -6,6 +6,7 @@ class ColorConstant {
   final bottomBarColor = Color(0xff2F2C44);
   final backgroundColor2 = Color(0xff2F2C44);
   final textColor = Color(0xFFFFFFFF);
+  final buttonColor = Color(0xffFFE494);
   static ColorConstant instance = ColorConstant._init();
 
   ColorConstant._init();

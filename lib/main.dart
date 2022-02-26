@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ticket_buy/color_constant.dart';
+
 import 'package:ticket_buy/home_page.dart';
 
 void main() => runApp(MaterialApp(
