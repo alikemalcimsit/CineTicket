@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:ticket_buy/color_constant.dart';
 
 final List<Widget> topBannerSlider = [
-  TopBanners(),
+  TopBanners(title:"Title 2"),
+  TopBanners(title:"Title 2"),
+  TopBanners(title:"Title 3"),
 ];
 
 class TopBanners extends StatelessWidget {
+  final String title;
   const TopBanners({
     Key? key,
+    required this.title,
   }) : super(key: key);
 
   @override
@@ -25,7 +29,9 @@ class TopBanners extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               Column(
-                children: [],
+                children: [
+                  Text(title),
+                ],
               ),
             ],
           ),
