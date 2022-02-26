@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_buy/bottom_banner.dart';
+import 'package:ticket_buy/center_text_icon.dart';
 import 'package:ticket_buy/top_banner.dart';
 
 import 'package:ticket_buy/image_constant.dart';
@@ -6,7 +8,7 @@ import 'package:ticket_buy/text_constant.dart';
 import 'color_constant.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -17,9 +19,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstant.instance.backgroundColor2,
+      backgroundColor: ColorConstant.instance.backgroundColor3,
       appBar: buildAppBar(),
-      body: NoonLoopingDemo(),
+      body: Column(
+        children: const [
+          NoonLoopingDemo(),
+          CenterTextIcon(),
+          BottomBanner(),
+        ],
+      ),
       bottomNavigationBar: buildBotttomNavigationBar(),
     );
   }
@@ -42,8 +50,8 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.home_filled),
           ),
           BottomNavigationBarItem(
-            label: "Wallet",
-            icon: Icon(Icons.account_balance_wallet_rounded),
+            label: "Search",
+            icon: Icon(Icons.search),
           ),
           BottomNavigationBarItem(
             label: "Account",
@@ -60,25 +68,26 @@ class _HomePageState extends State<HomePage> {
 
   AppBar buildAppBar() {
     return AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        centerTitle: true,
-        title: Row(
-          children: [
-            CircleAvatar(
-              backgroundImage: AssetImage(ImageConstant.appBarCircleIcon),
-            ),
-            const Spacer(),
-            const Icon(
-              Icons.location_pin,
-            ),
-            Text(TextConstant.instance.appBarHeadLine),
-            const Spacer(),
-            IconButton(
-                color: ColorConstant.instance.buttonColor,
-                onPressed: () {},
-                icon: const Icon(Icons.add_alert_sharp))
-          ],
-        ));
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      title: Row(
+        children: [
+          CircleAvatar(
+            backgroundImage: AssetImage(ImageConstant.appBarCircleIcon),
+          ),
+          const Spacer(),
+          const Icon(
+            Icons.location_pin,
+          ),
+          Text(TextConstant.instance.appBarHeadLine),
+          const Spacer(),
+          IconButton(
+              color: ColorConstant.instance.buttonColor,
+              onPressed: () {},
+              icon: const Icon(Icons.add_alert_sharp))
+        ],
+      ),
+    );
   }
 }
